@@ -113,10 +113,39 @@ hr{
 .course-duration{
     padding: 5px;
     color: #FF4A60;
-    width:94.83px;
-    height:29.38px;
     background: #FFE4E8;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
+}
+/* ------------------
+    Media Queries 
+--------------------*/
+
+/* Small devices */
+@media screen and (max-width:576px) {
+    .container{
+        width: 100%;
+    }
+    .players,.top-blog{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player,.top-blog article,.courses{
+        flex-direction: column;
+    } 
+}
+/* medium devices/tabs */
+@media only screen and (min-width:577px) and (max-width:991px) {
+    .container{
+        width: 100%;
+    }
+    .players,.top-blog{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .courses{
+        flex-flow: wrap;
+        /* justify-content: center;
+        justify-items: center; */
+
+    }
 }
